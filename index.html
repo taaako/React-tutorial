@@ -19,7 +19,14 @@
 
             const name = 'sato';
             ReactDOM.render(
-                <p>Hello! {name.toUpperCase()}</p>,
+                //<p>Hello! {name.toUpperCase()}</p>,
+                // 要素は一つのみ → 親でくくる||配列 で作成
+                // hrタグなど閉じタグのないものは "/" で閉じる
+                <div>
+                    <p>Hello</p>
+                    <hr/>
+                    <p>World</p>
+                </div>,
                 document.getElementById('root')
             );
         })();
