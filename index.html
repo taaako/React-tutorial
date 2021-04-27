@@ -24,7 +24,7 @@
             //}
 
             function Counter(props) {
-                return <div>0 {props.color}</div>;
+                return <li style={{backgroundColor:props.color}}>0</li>;
             }
 
             ReactDOM.render(
@@ -38,10 +38,12 @@
                 //onClick={showMessage}></div>,
 
                 // Componentの名前の一文字目は必ず大文字！
-                <div>
-                    <Counter color="tomato"/>
-                    <Counter color="skyblue"/>
-                    <Counter color="limegreen"/>
+                <div className="container">
+                    <ul>
+                        <Counter color="tomato"/>
+                        <Counter color="skyblue"/>
+                        <Counter color="limegreen"/>
+                    </ul>
                 </div>,
                 document.getElementById('root')
             );
