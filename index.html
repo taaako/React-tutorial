@@ -17,14 +17,21 @@
     <script type="text/babel">
         (() => {
 
-            const name = 'sato';
+            //const name = 'sato';
+            // 2単語目以降の頭文字を大文字で書く記法 "camelCase"
+            function showMessage() {
+                alert('Hello');
+            }
+
             ReactDOM.render(
                 //<p>Hello! {name.toUpperCase()}</p>,
                 // 要素は一つのみ → 親でくくる||配列 で作成
                 // hrタグなど閉じタグのないものは "/" で閉じる
 
                 //<div className="box"></div>,
-                <div style={{width:100, height:100, backgroundColor:'tomato'}}></div>,
+                //<div style={{width:100, height:100, backgroundColor:'tomato'}}></div>,
+                <div style={{width:100, height:100, backgroundColor:'tomato'}}
+                onClick={showMessage}></div>,
                 document.getElementById('root')
             );
         })();
