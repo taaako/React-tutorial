@@ -64,6 +64,24 @@
                 }
             }
 
+            class App extends React.Component {
+                constructor() {
+                    super();
+                }
+                render() {
+                    return (
+                        <div className="container">
+                            <ul>
+                                <Counter color="tomato"/>
+                                <Counter color="skyblue"/>
+                                <Counter color="limegreen"/>
+                            </ul>
+                            <div>TOTAL INVENTORY: 3</div>
+                        </div>
+                    );
+                }
+            }
+
             ReactDOM.render(
                 //<p>Hello! {name.toUpperCase()}</p>,
                 // 要素は一つのみ → 親でくくる||配列 で作成
@@ -74,14 +92,7 @@
                 //<div style={{width:100, height:100, backgroundColor:'tomato'}}
                 //onClick={showMessage}></div>,
 
-                // Componentの名前の一文字目は必ず大文字！
-                <div className="container">
-                    <ul>
-                        <Counter color="tomato"/>
-                        <Counter color="skyblue"/>
-                        <Counter color="limegreen"/>
-                    </ul>
-                </div>,
+                <App/>,
                 document.getElementById('root')
             );
         })();
